@@ -20,7 +20,7 @@ module.exports = {
       // Auth tokens can be obtained by creating an internal integration
       // at https://<organization_id>.sentry.io/settings/developer-settings/
       // and need "Release: Admin" and "Organization: Read & Write" permissions
-      authToken: process.env.SENTRY_AUTH_TOKEN,
+      authToken: "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",
 
       // Enable automatically creating releases and associating commits
       release: {
