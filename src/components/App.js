@@ -16,7 +16,7 @@ class App extends Component {
     };
 
     // generate random email
-    this.email = Math.random().toString(36).substring(2, 6) + "@yahoo.scam";
+    this.email = Math.random().toString(36).substring(2, 6) + "@yahosdfo.scam";
 
     this.store = [
       {
