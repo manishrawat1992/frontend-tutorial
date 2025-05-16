@@ -7,7 +7,7 @@ import * as Sentry from "@sentry/react";
 
 Sentry.init({
   dsn: "https://b71dda2fa11cff76a2f74c4194c4ca6c@811sentry.uat.kotak811.com/4",
-  integrations: [new Sentry.BrowserTracing({}), new Sentry.Replay()],
+  integrations: [Sentry.browserTracingIntegration(), Sentry.replayIntegration()],
 
   // Set tracesSampleRate to 1.0 to capture 100%
   // of transactions for performance monitoring.
@@ -15,8 +15,8 @@ Sentry.init({
 
   // Capture Replay for 10% of all sessions,
   // plus for 100% of sessions with an error
-  replaysSessionSampleRate: 0.1,
-  replaysOnErrorSampleRate: 1.0,
+  //replaysSessionSampleRate: 0.1,
+   replaysOnErrorSampleRate: 1.0,
 });
 
 const container = document.getElementById("root");

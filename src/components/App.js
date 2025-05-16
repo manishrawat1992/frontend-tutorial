@@ -4,7 +4,7 @@ import "./App.css";
 import wrenchImg from "../assets/wrench.png";
 import nailsImg from "../assets/nails.png";
 import hammerImg from "../assets/hammer.png";
-
+import * as Sentry from "@sentry/react";
 const monify = (n) => (n / 100).toFixed(2);
 const getUniqueId = () => "_" + Math.random().toString(36).substring(2, 9);
 
@@ -94,7 +94,11 @@ class App extends Component {
 
   checkout() {
     // Generate an error
-    this.myCodeIsMorePerfect();
+      console.log(i);
+      Sentry.captureMessage("Something went wrong : " + String(i));
+      //this.myCodeIsMorePerfect();
+
+      setTimeout(10);
 
     const order = {
       email: this.email,
