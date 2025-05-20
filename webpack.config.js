@@ -15,11 +15,15 @@ module.exports = {
     }),
     sentryWebpackPlugin({
       org: "sentry",
+      // org: "embark",
       project: "javascript-react",
 
       // Auth tokens can be obtained by creating an internal integration
       // at https://<organization_id>.sentry.io/settings/developer-settings/
       // and need "Release: Admin" and "Organization: Read & Write" permissions
+      // prod
+      //authToken: "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",
+
       authToken: "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",
 
       // Enable automatically creating releases and associating commits
